@@ -1,7 +1,7 @@
 class Menu extends HTMLElement {
    constructor() {
       super();
-      this.activeIndex = 0;
+      this.activeMonth = '';
       this.searchQuery = '';
    }
 
@@ -9,15 +9,14 @@ class Menu extends HTMLElement {
       this.render();
    }
 
-   setActiveIndex(index) {
-      this.activeIndex = index;
+   setActiveMonth(month) {
+      this.activeMonth = month;
       this.render();
    }
 
    setSearchQuery(query) {
       this.searchQuery = query.toLowerCase();
       this.render();
-      // Refocus search input after rendering so typing is not interrupted
       const searchInput = this.querySelector('.search-input');
       if (searchInput) {
          searchInput.focus();
@@ -46,6 +45,27 @@ class Menu extends HTMLElement {
          });
       }
 
+      // Grouping menuItems by month (MM)
+      const groupedByMonth = {};
+      menuItems.forEach((item) => {
+         const monthPart = item.title.split('.')[0]; // e.g. '12'
+         if (!groupedByMonth[monthPart]) {
+            groupedByMonth[monthPart] = [];
+         }
+         groupedByMonth[monthPart].push(item);
+      });
+      const monthsList = Object.keys(groupedByMonth).sort((a, b) => parseInt(b, 10) - parseInt(a, 10));
+      
+      // Default to the most recent month if not set
+      if (!this.activeMonth || !monthsList.includes(this.activeMonth)) {
+         this.activeMonth = monthsList[0];
+      }
+      
+      const monthNames = {
+         '12': 'December', '11': 'November', '10': 'October', '09': 'September',
+         '08': 'August', '07': 'July', '06': 'June', '05': 'May'
+      };
+
       return `
          <div class="menu-dashboard">
             <div class="search-container">
@@ -73,15 +93,26 @@ class Menu extends HTMLElement {
                </div>
             ` : `
                <ul class="tabs-container">
-                  ${menuItems.map((menuItem, i) => `
-                     <li class="tab-item ${this.activeIndex === i ? 'active' : ''}" data-index="${i}">
-                        ${menuItem.title}
+                  ${monthsList.map((m) => `
+                     <li class="tab-item ${this.activeMonth === m ? 'active' : ''}" data-month="${m}">
+                        ${monthNames[m] || `${m}월`}
                      </li>
                   `).join('')}
                </ul>
+               
                <div class="tab-content">
-                  <div class="card-grid active">
-                     ${menuItems[this.activeIndex] ? menuItems[this.activeIndex].lectures.map(lecture => this.renderCard(lecture)).join('') : ''}
+                  <div class="sessions-timeline">
+                     ${groupedByMonth[this.activeMonth] ? groupedByMonth[this.activeMonth].map((session) => `
+                        <div class="session-section">
+                           <div class="session-header">
+                              <span class="session-date-badge">${session.title} Session</span>
+                              <div class="session-divider-line"></div>
+                           </div>
+                           <div class="card-grid active">
+                              ${session.lectures.map(lecture => this.renderCard(lecture)).join('')}
+                           </div>
+                        </div>
+                     `).join('') : ''}
                   </div>
                </div>
             `}
@@ -153,8 +184,8 @@ class Menu extends HTMLElement {
       const tabItems = this.querySelectorAll('.tab-item');
       tabItems.forEach(tab => {
          tab.addEventListener('click', () => {
-            const index = parseInt(tab.getAttribute('data-index'), 10);
-            this.setActiveIndex(index);
+            const month = tab.getAttribute('data-month');
+            this.setActiveMonth(month);
          });
       });
 

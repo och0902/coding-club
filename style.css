@@ -705,6 +705,48 @@ body::before {
    filter: brightness(1.02);
 }
 
+/* Session Timeline styling */
+.sessions-timeline {
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.session-section {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
+.session-header {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+}
+
+.session-date-badge {
+   background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+   border: 1px solid var(--glass-border);
+   color: var(--text-primary);
+   padding: 5px 12px;
+   border-radius: 20px;
+   font-size: 13px;
+   font-weight: 700;
+   letter-spacing: 0.5px;
+   white-space: nowrap;
+}
+
+[data-theme="light"] .session-date-badge {
+   background: rgba(0, 0, 0, 0.03);
+   border-color: rgba(0, 0, 0, 0.08);
+}
+
+.session-divider-line {
+   flex-grow: 1;
+   height: 1px;
+   background: linear-gradient(to right, var(--border-color) 0%, transparent 100%);
+}
+
 /* Responsive Breakpoints */
 @media (max-width: 992px) {
    .hero-banner {
