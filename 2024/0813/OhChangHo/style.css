@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+   list-style: none;
+   text-decoration: none;
+   border: 1px solid red;
+}
+
+.container { 
+   min-width: 350px;
+   max-width: 1920px;
+   /* height: 100vh; */
+   margin: auto;
+   padding: 20px 2%;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+header {
+   padding: 10px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.logo,
+.user-info {
+   padding: 10px;
+   background-color: blue;
+   color: white;
+}
+
+.menu {
+   padding: 5px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.menu li {
+   padding: 5px;
+   background-color: aquamarine;
+}
+
+.hero-container {
+   /* background-image: url(''); */
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px;
+}
+
+.hero-img {
+   width: 100%;
+   aspect-ratio: 16/9;
+   /* background-color: burlywood; */
+   background-image: url(image.jpg);
+   background-position: center;
+}
+
+.hero-msg {
+   width: 100%;
+}
+
+.hero-msg-left {
+   width: 100%;
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+
+.hero-title,
+.hero-desc,
+.hero-more,
+.hero-banner {
+   padding: 10px;
+   background-color: honeydew;
+}
+
+.hero-banner {
+   display: none;
+}
+
+@media (min-width: 768px) {
+   .hero-container {
+      position: relative;
+   }
+   .hero-msg {
+      position: absolute;
+      aspect-ratio: 16/9;
+      /* height: 100%; */
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   } 
+   .hero-msg-left {
+      width: 400px;
+   }
+   .hero-banner{
+      display: block;
+      width: 200px;
+      height: 100%;
+   }
+}
+
+section {
+   margin: 100px auto;
+   padding: 20px 2%;
+}
+
+.sec1 {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.sec1-left {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.sec1-title,
+.sec1-desc1 {
+   background-color: white;
+   padding: 10px;
+   background-color: honeydew;
+}
+
+.sec1-box-wrap {
+   height: 100%;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 5px;
+}
+
+.sec1-box {
+   height: 100%;
+   min-height: 100px;
+   background-color: aquamarine;
+}
+
+.sec1-right {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.sec1-img {
+   width: 100%;
+   aspect-ratio: 16/9;
+   background-color: burlywood;
+}
+
+.sec1-desc2 {
+   width: 100%;
+   height: 200px;
+   background-color: honeydew;
+}
+
+@media (min-width: 768px) {
+   .sec1 {
+      flex-direction: row;
+   }
+}
+
+.sec2 {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.sec2-card {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.sec2-img {
+   width: 100%;
+   aspect-ratio: 16/9;
+   background-color: burlywood;
+}
+
+.sec2-desc {
+   width: 100%;
+   height: 200px;
+   background-color: honeydew;
+}
+
+@media (min-width: 768px) {
+   .sec2 {
+      flex-direction: row;
+   }
+} 
+
+.sec3 {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.sec3-img {
+   width: 100%;
+   aspect-ratio: 16/9;
+   background-color: burlywood;
+}
+
+.sec3-desc {
+   width: 100%;
+   min-height: 200px;
+   background-color: honeydew;
+}
+
+@media (min-width: 768px) {
+   .sec3 {
+      flex-direction: row;
+   }
+}
+
+.sec4 {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   gap: 10px;
+}
+
+.option {
+   width: 100%;
+   aspect-ratio: 1/1;
+   background-color: cadetblue;
+}
+
+footer {
+   padding: 20px 2%;
+   background-color: grey;
+}

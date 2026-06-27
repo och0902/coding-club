@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>How to get input value ?</title>
+</head>
+<body>
+   <input type="text" id="data-input">
+   <button onclick="getData()">click</button>
+
+   <script>
+      function getData() {
+         let data = document.getElementById("data-input");
+         console.log(data.value);
+      };
+   </script>
+</body>
+</html>

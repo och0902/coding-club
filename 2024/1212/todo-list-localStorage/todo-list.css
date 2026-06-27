@@ -1,0 +1,126 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   /* border: 1px solid red; */
+}
+
+body {
+   width: 100%;
+   min-height: 100vh;
+}
+
+.container {
+   max-width: 1024px;
+   margin: 50px auto;
+   padding: 0 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+}
+
+.title-header {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.title-description {
+   color: gray;
+   font-size: smaller;
+}
+
+.btn {
+   width: 100%;
+   padding : 10px;
+   border: none;
+   background-color: lightgray; 
+   border-radius: 5px;
+   cursor: pointer;
+   font-weight: bolder;
+}
+
+img {
+   width: 20px;
+   height: 20px;
+   margin-bottom: -5px;
+}
+
+#create-form, #update-form {
+   display:none;
+}
+
+.input-container {
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+}
+
+.input-container input {
+   width: 100%;
+   padding: 10px;
+   border-radius: 5px;
+}
+
+form button {
+   flex-basis: 25%;
+}
+
+table {
+   width: 100%;
+   border-top: 2px solid lightgray;
+   border-bottom: 1px solid lightgray;
+   border-collapse: collapse; 
+   border-spacing: 0
+}
+
+th {
+   padding: 12px 5px;
+   text-align: left;
+   font-weight:normal;
+   white-space: nowrap;
+}
+
+th:nth-child(1) {
+   width: 7%;
+   text-align: center
+}
+th:nth-child(2) {
+   width: 68%;
+}
+th:nth-child(3) {
+   width: 18%;
+}
+th:nth-child(4) {
+   width: 7%;
+}
+
+td {
+   border-top: 1px solid lightgray;
+   padding: 10px 5px;
+   white-space: nowrap;
+}
+
+td.checked {
+   text-decoration: line-through;
+}
+
+td:nth-child(1) {
+   text-align: center;
+}
+
+.todo {
+   white-space: normal;
+}
+
+@media (max-width: 768px) {
+   .at {
+      display: none;
+   }
+}
+
+td button { 
+   cursor: pointer;
+   background-color: transparent;
+   border: none;
+}

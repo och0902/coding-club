@@ -1,0 +1,96 @@
+/* * {
+   border: 1px solid red;
+} */
+
+html,
+body,
+:root {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.container {
+   width: 100%;
+   height: 100vh;
+   background: url(./cloud.jpg) center/cover;
+}
+
+.header {
+   width: full-width;
+   height: 80px;
+   background-color: yellow;
+   padding: 5px 30px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.logo {
+   width: 150px;
+   height: 50px;
+   background-color: red;
+}
+
+.menu-bar {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   width: 500px;
+   height: 40px;
+   background-color: blue;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.menu-item {
+   width: 100px;
+   height: 25px;
+   background-color: white;
+}
+
+.main {
+   width: full-width;
+   height: calc(100vh - 140px);  
+   background-color: bisque;
+   display: flex;
+}
+
+.side-bar {
+   flex-basis: 20%;
+   width: full-width;
+   height: 100%;
+   background-color: blueviolet;
+   padding: 0;
+   list-style: none;
+   margin: 0;
+}
+
+.side-bar-item {
+   width: 150px;
+   height: 20px;
+   margin: 20px auto;
+   padding: 10px;
+   background-color: white;
+}
+
+.main-container {
+   flex-basis: 80%;
+   width: full-width;
+   height: 100%;
+   background-color: chocolate;
+}
+
+.main-content {
+   margin: 20px;
+   width: full-width;
+   height: 200px;
+   background-color: white;
+}
+
+.footer {
+   width: full-width;
+   height: 60px;
+   background-color: yellowgreen;
+}

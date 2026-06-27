@@ -1,0 +1,147 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   /* border: 1px solid red; */
+}
+
+body {
+   width: 100%;
+   min-height: 100vh;
+}
+
+.container {
+   max-width: 1280px;
+   margin: 50px auto;
+   padding: 0 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 80px;
+}
+
+section {
+   box-shadow: 5px 5px 10px gray;
+   border-radius: 15px;
+   padding: 50px 30px;
+}
+
+.desc {
+   color: gray;
+   font-size: smaller;
+}
+
+.clock {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+#display-clock {
+   margin: 30px auto;
+   font-size: 30px;
+}
+
+@media (min-width: 600px) {
+   #display-clock {
+      font-size: 45px;
+   }
+}
+
+@media (min-width: 992px) {
+   #display-clock {
+      font-size: 70px;
+   }
+}
+
+.stopwatch {
+   width: 100%;
+   text-align: center;
+   margin: 30px auto 50px;
+   font-size: 30px;
+}
+
+@media (min-width: 600px) {
+   .stopwatch {
+      font-size: 45px;
+   }
+}
+
+@media (min-width: 992px) {
+   .stopwatch {
+      font-size: 70px;
+   }
+}
+
+.buttons {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 15px;
+}
+
+button {
+   width: 100%;
+   padding : 10px;
+   border: none;
+   background-color: lightgray; 
+   border-radius: 5px;
+   cursor: pointer;
+   font-weight: bolder;
+}
+
+.buttons button:nth-child(2) {
+   background: #000;
+   color: #fff;
+}
+
+.timer-set {
+   margin: 20px 0;
+}
+
+.input-container {
+   margin-bottom: 20px;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   gap: 15px;
+}
+
+.inputs {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 8px;
+}
+
+input {
+   width: 100%;
+   padding: 10px;
+   border-radius: 5px;
+   /* border: none; */
+   outline: none;
+}
+
+.timer {
+   width: 100%;
+   text-align: center;
+   margin: 30px auto 50px;
+   font-size: 30px;
+}
+
+@media (min-width: 600px) {
+   .timer {
+      font-size: 45px;
+   }
+}
+
+@media (min-width: 992px) {
+   .timer {
+      font-size: 70px;
+   }
+}

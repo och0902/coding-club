@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Clock application</title>
+   <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+   <div class="container">
+      <div>
+         <h1>Clock application</h1>
+         <div class="desc">Digital clock application using HTML, CSS, and Javascript</div>
+      </div>
+      <section>
+         <h2>Digital clock</h2>
+         <div class="clock">
+            <div id="display-clock"></div>
+         </div>
+      </section>
+      <section>
+         <h2>Stop watch</h2>
+         <div class="stopwatch">
+            <span id="stopwatch-hour"></span>:<span id="stopwatch-minute"></span>:<span id="stopwatch-second"></span>:<span id="stopwatch-tenms"></span>
+         </div>
+         <div class="buttons">
+            <button type="button" onclick="stopwatchStart()">Start</button>
+            <button type="button" onclick="stopwatchStop()">Stop</button>
+            <button type="button" onclick="stopwatchReset()">Reset</button>
+         </div>
+      </section>
+      <section>
+         <h2>Timer</h2>
+         <!-- <form class="timer-set"> -->
+            <div class="input-container">
+               <div class="inputs">
+                  <label for="tmr-hour">Hour</label>
+                  <input type="text" id="tmr-hour" placeholder="0">
+               </div>
+               <div class="inputs">
+                  <label for="tmr-minute">Minute</label> 
+                  <input type="text" id="tmr-minute" placeholder="0">
+               </div>
+               <div class="inputs">
+                  <label for="tmr-second">Second</label>
+                  <input type="text" id="tmr-second" placeholder="0">
+               </div>
+            </div>
+            <button type="submit" onclick="timerSet()">Set</button>
+         <!-- </form> -->
+         <div class="timer">
+            <span id="timer-hour"></span>:<span id="timer-minute"></span>:<span id="timer-second"></span>:<span id="timer-tenms"></span>
+         </div>
+         <div class="buttons">
+            <button type="button" onclick="timerStart()">Start</button>
+            <button type="button" onclick="timerStop()">Stop</button>
+            <button type="button" onclick="timerReset()">Reset</button>
+         </div>
+      </section>
+   </div>
+   <script src="clock.js"></script>
+</body>
+</html>

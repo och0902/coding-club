@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>To-do List</title>
+   <link rel="stylesheet" href="./todo-list.css" />
+</head>
+<body>
+   <div class="container">
+      <div class="title-container">
+         <h2>To-do List : Hard-corded</h2>
+         <div>To-do List - web application using CRUD (create, read, update, and delete) operations of data</div>
+      </div>
+      <div class="form-container">
+         <form id="create-form">
+            <div class="input-container">
+               <input type="text" id="todo-create" placeholder="input your work to do" >
+               <button type="button" class="btn" onclick="createTodo()">
+                  <img src="images/icons8-plus-50.png" alt="create"> Create
+               </button>
+            </div>
+         </form>
+         <form id="update-form">
+            <input type="hidden" id="id-update">
+            <div class="input-container">
+               <input type="text" id="todo-update" placeholder="update your work to do">
+               <button type="button" class="btn" onclick="updateTodo()">
+                  <img src="images/icons8-edit-48.png" alt="update"> Update
+               </button>
+            </div>
+         </form>
+      </div>
+      <table>
+         <thead>
+            <th>To do</th>
+            <th>Action</th>
+         </thead>
+         <tbody id="table-data">
+         </tbody>
+      </table>
+   </div>
+   <script src="./todo-list.js"></script>
+</body>
+</html>

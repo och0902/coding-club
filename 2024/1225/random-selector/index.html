@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Random Selection</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="js/confetti.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1 class="title">2024, 1年を振り返って</h1>
+		<div class='yokohama'>
+			<div class="selected-members-container">
+				<div id="yokohama-selected-members-list"></div>
+			</div>
+			<ul id="yokohama-members-list"></ul>
+		</div>
+		<div class='kyoto'>
+			<div class="selected-members-container">
+				<div id="kyoto-selected-members-list"></div>
+			</div>
+			<ul id="kyoto-members-list"></ul>
+		</div>
+		<div class="buttons">
+			<button id="select-button" type="button">
+				<h1>Random Selection</h1>
+			</button>
+			<button id="cancel-button" type="button">
+				<h1>Cancel</h1>
+			</button>
+		</div>
+		<audio id="audio1">
+			<source src="assets/fanfare.mp3" type='audio/mp3'/>   
+		</audio>
+		<audio id="audio2">
+			<source src="assets/pabam.mp3" type='audio/mp3'/>   
+		</audio>
+		<audio id="audio3" >
+			<source src="assets/claps.mp3" type='audio/mp3'/>   
+		</audio>
+	</div>
+	<script src="js/data.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

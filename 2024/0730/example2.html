@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Example 4</title>
+   <style>
+      * {
+         /* border: 1px solid red;  */
+      }
+      .container{
+         height: 100vh;
+         padding: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      .box-wrap1 {
+         display: flex;
+      }
+      .box-wrap2 {
+         display: flex;
+      }
+      .box-large {
+         width: 250px;
+         height: 500px;
+         height: 200px;
+         margin: 10px;
+         background-color: magenta;
+         text-align: center;
+         color: white;
+      }
+      .box-small {
+         width: 300px;
+         height: 95px;
+         margin: 10px;
+         background-color: magenta;
+         text-align: center;
+         color: white;
+      }
+      @media (max-width: 1280px) {
+         .box-wrap2 {
+            display: block;
+         }
+         .box-large {
+            width: 300px;
+         }
+      }
+      @media (max-width: 768px) {
+         .box-wrap1 {
+            display: block;
+         }
+         .box-large {
+            width: 300px;
+         }
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <div class="box-wrap1">
+         <div class="box-wrap2">
+            <div class="box-large">Box #1</div>
+            <div class="box-wrap3">
+               <div class="box-small">Box #2</div>
+               <div class="box-small">Box #3</div>
+            </div>
+         </div>
+         <div class="box-wrap2">
+            <div class="box-large">Box #4</div>    
+            <div class="box-wrap3">
+               <div class="box-small">Box #5</div>
+               <div class="box-small">Box #6</div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

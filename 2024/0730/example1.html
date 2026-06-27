@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Example 4</title>
+   <style>
+      .container{
+         height: 100vh;
+         padding: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      .content {
+         display: flex;
+      }
+      @media (max-width: 768px) {
+         .content {
+            display: block;
+         }
+      }
+      .box {
+         width: 350px;
+         height: 200px;
+         margin: 10px;
+         background-color: magenta;
+         text-align: center;
+         color: white;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <div class="content">
+         <div class="box">Box #1</div>
+         <div class="box">Box #2</div>  
+      </div>
+   </div>
+</body>
+</html>
